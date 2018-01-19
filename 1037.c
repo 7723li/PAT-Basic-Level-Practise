@@ -9,6 +9,7 @@ int GalleonToKnut = SickleToKnut * GalleonToSickle;
 
 int main(int argc, char const *argv[])
 {
+<<<<<<< HEAD
  	int Knutp, Sicklep, Galleonp; // 应付
  	int Knuta, Sicklea, Galleona; // 实付
  	int p, a, change;
@@ -43,3 +44,30 @@ int main(int argc, char const *argv[])
 // 14.1.28 10.16.27
 // 输出样例2：
 // -3.2.1
+=======
+   int Knutp, Sicklep, Galleonp; // 应付
+   int Knuta, Sicklea, Galleona; // 实付
+   int p, a, change;
+
+   scanf("%d.%d.%d", &Galleonp, &Sicklep, &Knutp);
+   scanf("%d.%d.%d", &Galleona, &Sicklea, &Knuta);
+
+   p = Galleonp * GalleonToKnut + Sicklep * SickleToKnut + Knutp;
+   a = Galleona * GalleonToKnut + Sicklea * SickleToKnut + Knuta;
+   change = a - p;
+
+   if(change < 0){
+     change = -change;
+     printf("-%d.", change / GalleonToKnut);
+   }
+   else{
+     printf("%d.", change / GalleonToKnut);
+   }
+   change -= change / GalleonToKnut * GalleonToKnut;
+   printf("%d.", change / SickleToKnut);
+   change -= change / SickleToKnut * SickleToKnut;
+   printf("%d\n", change);
+  
+  return 0;
+}
+>>>>>>> 1495b7a6bbbe88818fd4a039a86bee5e77cf9f53
