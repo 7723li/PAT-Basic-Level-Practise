@@ -29,8 +29,8 @@ void Insert(int*c, int possm, int posbi){ // small,big
 }
 
 void Insertion(int* c, int* flag, int* pos){
-	int  i ,j;
-		for(i = *pos; i<nums; i++){
+	int  temp, i ,j;
+	for(i = *pos; i<nums; i++){
 		for(j=0; j<i; j++){
 			if(c[i] < c[j]){
 				Insert(c, i, j);//将i位置的值插入到j中
